@@ -29,7 +29,7 @@ let items = [
   ]
 //console.log(items)
 
-//  let cart = []
+  let cart = []
 
   let list = document.querySelector('ul')
 
@@ -37,11 +37,24 @@ let items = [
   console.log(items[i].name)
 }*/
 
-items.forEach(item=>{
-  console.log(item.name)
+/*items.forEach(item,i)=>{
   list.innerHTML += `<li>
   <div>Product: ${item.name}</div>
   <div>Price: ${item.price}</div>
   <image src="${item.image}" />
+  <input type="number" placeholder="quantity" onchange='inputChange(${i})' /> 
+  <button>Buy this</button>
+</li>`
+})
+*/
+
+items.forEach((item,i)=>{
+  list.innerHTML += `<li>
+      <div>Name: ${item.name}</div>
+      <div>price: $${item.price}</div>
+      <image src="${item.image}" />
+      <input type="number" placeholder="quantity" onchange='inputChange(${i})'/>
+      <button>Buy Item</button>
   </li>`
 })
+
